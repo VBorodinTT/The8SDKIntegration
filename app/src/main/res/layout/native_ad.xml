@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ This portion of the source code is copyrighted by Thumbtack Technology LLC,
+  ~ all rights reserved, and is subject to the terms of a license agreement
+  ~ in which it constitutes “Pre-existing work” or "Licensed Product".
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/native_ad_logo"
+        android:layout_alignBottom="@+id/native_ad_body"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/native_ad_body"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/native_ad_title"
+        android:layout_alignLeft="@+id/native_ad_title"
+        android:layout_alignStart="@+id/native_ad_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/native_ad_title"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_toRightOf="@+id/native_ad_logo"
+        android:layout_toEndOf="@+id/native_ad_logo" />
+
+    <RatingBar
+        android:id="@+id/native_rating"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/native_ad_body"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_marginLeft="20dp" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ This portion of the source code is copyrighted by Thumbtack Technology LLC,
+  ~ all rights reserved, and is subject to the terms of a license agreement
+  ~ in which it constitutes “Pre-existing work” or "Licensed Product".
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#d6d6d6">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/test_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin risus turpis, sed sodales arcu tristique vel. Sed maximus nulla mattis, euismod massa eu, bibendum ipsum. Suspendisse eget tortor sit. "
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

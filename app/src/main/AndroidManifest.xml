@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="sdk.integration">
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:name=".App"
+                 android:icon="@mipmap/icon8"
+                 android:theme="@style/AppTheme">
+
+        <activity
+                android:name=".NativeActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                        android:host="the8cloud"
+                        android:pathPrefix="/offer"
+                        android:scheme="com.eight.trillerdemo"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PostToTriller"/>
+        <activity android:name=".ContentWithUrl"/>
+        <activity android:name=".ContentAsFile"/>
+        <activity
+                android:name=".SettingsActivity"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"/>
+
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id"/>
+
+    </application>
+</manifest>
