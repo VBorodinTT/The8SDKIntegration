@@ -120,6 +120,16 @@ Add third party libraries:
 
     The8CloudSdk.openSponsorsHub(context);
 
+### Targeting
+
+Our SDK supports targeting for ads.
+You should use
+
+        the8CloudSdkInfo.targetingInfo = new The8CloudTargetingInfo();
+        the8CloudSdkInfo.targetingInfo.gender = "male";
+        the8CloudSdkInfo.targetingInfo.followersCount = 666;
+
+before SDK initialization.
 
 ### UI Customization
 
@@ -217,7 +227,9 @@ SDK allows to extend its functionality
 
 SDK feed could be received as a native ad. You just should call
 
-                The8CloudSdk.getNativeAds(1, 2, listener)
+                The8CloudTargetingInfo targeting = new The8CloudTargetingInfo()
+                targeting.age = 35
+                The8CloudSdk.getNativeAds(1, 2, targeting, listener)
 
 And show recieved info as you want, where you want.
 

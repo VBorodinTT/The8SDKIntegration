@@ -12,6 +12,7 @@ import com.squareup.picasso.Picasso
 import com.weare8.android.nativeAd.The8CloudNativeAdContent
 import com.weare8.android.nativeAd.The8CloudNativeAdListener
 import com.weare8.android.sdk.The8CloudSdk
+import com.weare8.android.sdk.The8CloudTargetingInfo
 
 class NativeActivity : Activity() {
 
@@ -38,7 +39,9 @@ class NativeActivity : Activity() {
 
         adRunnable = object : Runnable {
             override fun run() {
-                The8CloudSdk.getNativeAds(1, 2, listener)
+                val targeting = The8CloudTargetingInfo()
+                targeting.age = 35
+                The8CloudSdk.getNativeAds(1, 2, targeting, listener)
 
                 handler.postDelayed(this, 300000)
             }
@@ -113,8 +116,10 @@ class NativeActivity : Activity() {
                     view = View.inflate(this@NativeActivity, R.layout.native_ad, null)
                     contents.addView(view)
 
-                    (view.findViewById<View>(R.id.native_ad_body) as TextView).text = nativeAdContent.offer.nativeAdMediaSubtitle
-                    (view.findViewById<View>(R.id.native_ad_title) as TextView).text = nativeAdContent.offer.nativeAdMediaTitle
+                    (view.findViewById<View>(R.id.native_ad_body) as TextView).text =
+                            nativeAdContent.offer.nativeAdMediaSubtitle
+                    (view.findViewById<View>(R.id.native_ad_title) as TextView).text =
+                            nativeAdContent.offer.nativeAdMediaTitle
                     if (nativeAdContent.image.isNotEmpty())
                         Picasso.with(this@NativeActivity).load(nativeAdContent.image).into(view.findViewById<View>(R.id.native_ad_logo) as ImageView)
                     The8CloudSdk.registerNativeAdView(view, nativeAdContent)
