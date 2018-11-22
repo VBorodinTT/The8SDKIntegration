@@ -187,10 +187,11 @@ SDK allows to extend its functionality
           intent.getLongExtra(SDKConstants.CONTENT_CAMPAIGN_ID, 0L)
           intent.getLongExtra(SDKConstants.CONTENT_OFFER_ID, 0L)
 
-  After posting completed you should return result with post url:
+  After posting completed you should return result with post url and id:
 
         setResult(RESULT_OK, Intent()
-           .putExtra(SDKConstants.TRILLER_POST_URL, "https://v.triller.co/...."))
+           .putExtra(SDKConstants.TRILLER_POST_URL, "https://v.triller.co/....")
+           .putExtra(SDKConstants.TRILLER_POST_ID, "12345ABCDE"))
 
 * Add you own button to SDK toolbar
 

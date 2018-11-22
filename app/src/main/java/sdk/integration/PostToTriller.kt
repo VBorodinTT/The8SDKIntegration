@@ -18,7 +18,8 @@ class PostToTriller : Activity() {
         Log.e("test", "PostToTriller offer id ${intent.getLongExtra(SDKConstants.CONTENT_OFFER_ID, 0L)}")
 
         setResult(RESULT_OK, Intent()
-                .putExtra(SDKConstants.TRILLER_POST_URL, "https://v.triller.co/mXnL0l"))
+                .putExtra(SDKConstants.TRILLER_POST_URL, "https://v.triller.co/mXnL0l")
+                .putExtra(SDKConstants.TRILLER_POST_ID, "12345ABCDE"))
 
         finish()
     }
