@@ -24,6 +24,7 @@ class SettingsActivity : Activity() {
 
         findViewById<View>(R.id.offers).setOnClickListener { The8CloudSdk.openSponsorsHub(this@SettingsActivity) }
         findViewById<View>(R.id.socials).setOnClickListener { The8CloudSdk.showSocialAccounts(this@SettingsActivity) }
+        findViewById<View>(R.id.paypal).setOnClickListener { The8CloudSdk.showPaypalInfo(this@SettingsActivity) }
         findViewById<View>(R.id.settings).setOnClickListener { The8CloudSdk.showSettings(this@SettingsActivity) }
 
         findViewById<View>(R.id.support).setOnClickListener {

@@ -75,6 +75,19 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="Paypal Info"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/support"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

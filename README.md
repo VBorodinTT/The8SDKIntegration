@@ -259,6 +259,7 @@ when you show some ad unit. We need it to track views.
 * Use *The8CloudSdk.openSponsorsHub(context)* to open SDK main UI screen
 * Use *The8CloudSdk.showSocialAccounts(context)* to open page where user could connect them cosial accounts
 * Use *The8CloudSdk.showSettings(context)* to open page where user could fill up his personal info
+* Use *The8CloudSdk.showPaypalInfo(context)* to open page where user could fill up his paypal account e-mail
 * Use *The8CloudSdk.feedbackSupport(...)* to let user to make a feedback
 * Use *The8CloudSdk.setPushNotificationStatus* and *The8CloudSdk.getPushNotificationStatus* to operate with notifications
 * use *The8CloudSdk.setDeepLink(context, data)* to pass the incoming deep links connected with our SDK. It is necessary for push notifications
