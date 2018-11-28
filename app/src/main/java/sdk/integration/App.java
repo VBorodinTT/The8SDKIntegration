@@ -62,8 +62,7 @@ public class App extends Application {
         the8CloudSdkInfo.targetingInfo.gender = "cat";
         the8CloudSdkInfo.targetingInfo.followersCount = 666;
 
-        The8CloudSdk.initSdk(this, the8CloudSdkInfo, () -> {
-        });
+        The8CloudSdk.initSdk(this, the8CloudSdkInfo);
     }
 
 }

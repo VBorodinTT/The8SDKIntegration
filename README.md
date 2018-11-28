@@ -103,15 +103,18 @@ Add third party libraries:
         the8CloudSdkInfo.setTwitterKeys(TWITTER_KEY, TWITTER_SECRET);
         the8CloudSdkInfo.youtubeKey = YOUTUBE_KEY;
 
-        The8CloudSdk.initSdk(this, the8CloudSdkInfo, () -> {
-        });
+        The8CloudSdk.initSdk(this, the8CloudSdkInfo);
 
+  And when you are ready to use SDK in your actvity call
 
- Each time you calls **The8CloudSdk.initSdk** SDK tries to setup it’s internal state. When this process finished SDK sends **The8CloudSDKStatusChangedNotification**.
+        The8CloudSdk.login(this, () -> {
+          });
 
- Pass the **The8CloudSdkStateChangeListener** to **The8CloudSdk.initSdk**  and in callback check state of SDK with functions:
+ Each time you calls **The8CloudSdk.login** SDK tries to setup it’s internal state. When this process finished SDK sends **The8CloudSDKStatusChangedNotification**.
+
+ Pass the **The8CloudSdkStateChangeListener** to **The8CloudSdk.login**  and in callback check state of SDK with functions:
  - **The8CloudSdk.isSdkReady** - ready/not-ready (if not ready you can hide your SposorHub button for opening of SponsorHub)
- - **The8CloudSdk.isSdkEnabled** - if false, it means that SDK was not initialized correctly (after calling of The8CloudSDKConfig.prepare()) or SDK usage has been disabled on backend side
+ - **The8CloudSdk.isSdkEnabled** - if false, it means that SDK was not initialized correctly or SDK usage has been disabled on backend side
  - **The8CloudSdk.isSdkNativeAdChannelEnabled** - if false, it means that you should not load (and display) offers as Native Ads.
 
  After initializing, the SDK is ready for use.

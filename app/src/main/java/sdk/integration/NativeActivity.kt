@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import com.squareup.picasso.Picasso
 import com.weare8.android.nativeAd.The8CloudNativeAdContent
 import com.weare8.android.nativeAd.The8CloudNativeAdListener
@@ -88,15 +89,24 @@ class NativeActivity : Activity() {
     }
 
     private fun init8Sdk() {
-        initAdManager()
-        setupAd()
-        initBadges()
-        setDeepLink()
+        The8CloudSdk.login(this) {
+            if (The8CloudSdk.isSdkReady() && The8CloudSdk.isSdkEnabled()) {
+                initAdManager()
+                setupAd()
+                initBadges()
+                setDeepLink()
+            } else {
+                Toast.makeText(this, "SDK is disabled!", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 
     private fun setupAd() {
-        handler.post(adRunnable)
+        if (The8CloudSdk.isNativeAdEnabled())
+            handler.post(adRunnable)
+        else
+            Toast.makeText(this, "NativeAd is disabled!", Toast.LENGTH_SHORT).show()
 
         val anyOfferSubmitted = The8CloudSdk.isAnyOfferSubmitted()
         vSettingsButton.visibility = if (anyOfferSubmitted) View.VISIBLE else View.GONE
