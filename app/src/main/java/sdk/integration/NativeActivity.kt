@@ -89,8 +89,9 @@ class NativeActivity : Activity() {
     }
 
     private fun init8Sdk() {
+        The8CloudSdk.setTrillerUserInfo("1", "2", "3")
         The8CloudSdk.login(this) {
-            if (The8CloudSdk.isSdkReady() && The8CloudSdk.isSdkEnabled()) {
+            if (The8CloudSdk.isSdkReady() && (The8CloudSdk.isSdkEnabled() || The8CloudSdk.isNativeAdEnabled())) {
                 initAdManager()
                 setupAd()
                 initBadges()

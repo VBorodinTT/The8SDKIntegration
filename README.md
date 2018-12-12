@@ -134,6 +134,13 @@ You should use
 
 before SDK initialization.
 
+or you can set it when you are requesting native ad
+
+        val targeting = The8CloudTargetingInfo()
+        targeting.age = 35
+        The8CloudSdk.getNativeAds(1, 2, targeting, listener)
+
+
 ### UI Customization
 
  SDK permits to change a lot of UI details like fonts, colors, intro pages, showing/hiding UI elements.
@@ -167,9 +174,16 @@ SDK allows to extend its functionality
 
 * If you connect SDK to Triller app you could set user identifiers
 
+with initialization
+
         the8CloudSdkInfo.trillerUserId = "userid";
         the8CloudSdkInfo.trillerUserName = "username";
         the8CloudSdkInfo.trillerUserAvatar = "https://...avatar.jpg";
+
+or later by dirrect call
+
+        The8CloudSdk.setTrillerUserInfo("userId", "username", "https://...avatar.jpg")
+
 
 * Set your own content creator tool
 
