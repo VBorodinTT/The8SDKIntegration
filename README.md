@@ -42,24 +42,23 @@ Add third party libraries:
         implementation 'com.google.android.gms:play-services-base:16.0.1'
         implementation 'com.google.android.gms:play-services-identity:16.0.0'
 
-        implementation ('com.google.firebase:firebase-core:16.0.4')
+        implementation ('com.google.firebase:firebase-core:16.0.5')
         implementation ('com.google.firebase:firebase-messaging:17.3.4')
 
         // Glide image loading
-        implementation 'com.github.bumptech.glide:glide:3.8.0'
-        implementation 'com.github.bumptech.glide:okhttp-integration:1.5.0@aar'
-        implementation 'jp.wasabeef:glide-transformations:1.3.1'
+        implementation 'com.github.bumptech.glide:glide:4.8.0'
+        implementation 'com.github.bumptech.glide:okhttp-integration:4.8.0'
+        implementation 'jp.wasabeef:glide-transformations:3.3.0'
 
         // RxJava
         implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
         implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-        implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+        implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
 
         // Retrofit
         implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-        implementation 'com.squareup.okhttp:okhttp:2.7.5'
-        implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-        implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+        implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+        implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
         implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
         implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
 
@@ -73,10 +72,11 @@ Add third party libraries:
         }
 
         //Kotlin
-        implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-        implementation "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
-        implementation "org.jetbrains.anko:anko-sdk15:$ankoVersion"
-        implementation "org.jetbrains.anko:anko-support-v4-commons:$ankoVersion"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.11"
+        implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
+        implementation "org.jetbrains.anko:anko-cardview-v7:0.10.7"
+        implementation "org.jetbrains.anko:anko-sdk15:0.10.7"
+        implementation "org.jetbrains.anko:anko-support-v4-commons:0.10.7"
 
         //Other
         implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
