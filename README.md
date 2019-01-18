@@ -296,3 +296,12 @@ or
 
         The8CloudSdk.setTrillerUserInfo(..., true)
 
+## SDK Status
+
+The following functions can be used to correctly display the status of the SDK:
+
+* *The8CloudSdk.isMaintainMode()* indicates that 8cloud server is under maintenance
+* *The8CloudSdk.isSdkReady()* when SDK successfully logged in 8cloud server
+* *The8CloudSdk.isAnyOfferSubmitted()* shows that current user has submitted offers (works even if SDK in offline)
+
+so in your app we recommend to show "Sponsorship" button when you have True answer on isAnyOfferSubmitted and analyze if SDK  has isMaintainMode and isSdkReady when user clicks this button (and show proper message or open SDK UI)
