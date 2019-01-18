@@ -280,3 +280,19 @@ when you show some ad unit. We need it to track views.
 * Use *The8CloudSdk.feedbackSupport(...)* to let user to make a feedback
 * Use *The8CloudSdk.setPushNotificationStatus* and *The8CloudSdk.getPushNotificationStatus* to operate with notifications
 * use *The8CloudSdk.setDeepLink(context, data)* to pass the incoming deep links connected with our SDK. It is necessary for push notifications
+
+## Users with flagged content
+
+If your user has flagged content you can inform our SDK about it
+Just add this info into Targetting params when you request Native ad
+
+        targeting.hasFlaggedContent = true
+
+or set it when you initializing sdk:
+
+        the8CloudSdkInfo.hasFlaggedContent = true;
+
+or
+
+        The8CloudSdk.setTrillerUserInfo(..., true)
+
